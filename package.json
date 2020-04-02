@@ -1,0 +1,55 @@
+{
+  "name": "milanbargiel.com",
+  "version": "1.0.0",
+  "description": "Personal website of developer and designer Milan Bargiel",
+  "author": "Milan Bargiel",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/milanbargiel/milanbargiel.com"
+  },
+  "scripts": {
+    "clean": "rimraf 'dist'",
+    "lint-scss": "stylelint 'dev/scss/**/*.scss'",
+    "scss": "node-sass 'dev/scss' --output 'dist'",
+    "postcss": "postcss --use autoprefixer --replace 'dist/*.css' --no-map",
+    "build:css": "npm-run-all --serial lint-scss scss postcss",
+    "build:html": "hbs 'dev/templates/[!_]*.hbs' --partial 'dev/templates/_*.hbs' --output 'dist/'",
+    "build:images": "imagemin 'dev/images/**/*.{png,jpg,gif,svg,ico}' --out-dir=dist/images",
+    "build:javascript": "copyfiles --up 2 'dev/js/**/*.js' 'dist/js'",
+    "prebuild": "npm run clean",
+    "build": "npm-run-all --serial build:*",
+    "watch:templates": "onchange 'dev/templates' -- npm run build:html",
+    "watch:images": "onchange 'dev/images' -- npm run build:images",
+    "watch:scss": "onchange 'dev/scss' -- npm run build:css",
+    "watch:javascript": "onchange 'dev/js' -- npm run build:javascript",
+    "watch": "npm-run-all --parallel --silent watch:*",
+    "serve": "browser-sync start --server 'dist' --files 'dist'",
+    "prestart": "npm run build",
+    "start": "npm-run-all --parallel serve watch"
+  },
+  "scriptsComments": {
+    "lint-scss": "lint scss-files with rules specified in .stylelintrc.json",
+    "scss": "compile scss to css",
+    "postcss": "use postcss to autoprefix css-files in dist-folder without sourcemap in output",
+    "build:html": "render templates with partials (filename starts with underscore) to dist folder",
+    "build:images": "optimize images and output in dist folder",
+    "build:javascript": "copy all javascript files to dist folder, without copying folder structure",
+    "serve": "start a local dev server and reload browser on filechange in dist folder",
+    "start": "run build and watch tasks in parallel"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "browser-sync": "^2.26.7",
+    "copyfiles": "^2.2.0",
+    "hbs-cli": "^1.3.0",
+    "imagemin-cli": "^5.1.0",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^6.1.0",
+    "postcss-cli": "^7.1.0",
+    "rimraf": "^3.0.2",
+    "stylelint": "^13.2.1",
+    "stylelint-config-recommended": "^3.0.0"
+  }
+}
