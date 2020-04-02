@@ -8,11 +8,13 @@
 ### Folder structure
 ```bash
 ├── dev
+|   ├── fonts
 |   ├── images
 |   ├── js
 |   ├── scss
 |   └── templates
 ├── dist
+|   ├── fonts
 |   ├── images
 |   ├── js
 |   ├── index.html
@@ -32,6 +34,10 @@
 - Reload Browser
 
 **When JS file changes:**
+- Copy to dist folder
+- Reload Browser
+
+**When font file changes:**
 - Copy to dist folder
 - Reload Browser
 
