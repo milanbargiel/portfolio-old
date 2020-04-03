@@ -44,6 +44,18 @@ body {
   margin: 0 -10px;
 }
 
+.intro__image-container::after {
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 30%);
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .intro__image {
   width: 100%;
 }
