@@ -21,8 +21,13 @@
     <link rel="icon" type="image/png" href="images/favicon.ico">
 </head>
 <body>
-    <div class="content">
-        {{> @partial-block }}
+    <div class="content-container">
+        <header class="header">
+            <a class="header__github" href="https://github.com/milanbargiel" target="_blank">github</a>
+        </header>
+        <main>
+            {{> @partial-block }}
+        </main>
     </div>
 
     <!-- JS
