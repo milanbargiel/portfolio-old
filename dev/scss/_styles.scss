@@ -6,13 +6,13 @@
 // basic styles
 $base-font-size: 18px;
 $base-font-family: 'PT Mono', monospace;
-$base-line-height: 1.3;
+$base-line-height: 1.4;
 
 // distances
 $minor--px: 10px;
 $slight--px: 18px;
 // $modest--px: 30px;
-// $great--px:       50px !default
+// $great--px: 50px;
 $significant--px: 68px;
 $immense--px: 80px;
 
@@ -87,4 +87,14 @@ body {
     height: 15px;
     width: 51px;
   }
+}
+
+.project {
+  text-align: left;
+  margin-bottom: $significant--px;
+}
+
+.project__image {
+  width: 100%;
+  margin-bottom: $minor--px;
 }
