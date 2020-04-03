@@ -10,12 +10,11 @@ $base-line-height: 1.3;
 
 // distances
 $minor--px: 10px;
-// $slight--px:      16px !default
-// $modest--px:      30px !default
+$slight--px: 18px;
+// $modest--px: 30px;
 // $great--px:       50px !default
-// $significant--px: 60px !default
-// $immense--px:     80px !default
-// $giant--px:       100px !default
+$significant--px: 68px;
+$immense--px: 80px;
 
 // content lengths
 $max-page-width: 1000px;
@@ -31,11 +30,11 @@ body {
   max-width: $max-page-width;
 }
 
-.header {
+.nav {
   display: flex;
 }
 
-.header__github {
+.nav__github {
   margin: 13px 0 13px auto;
 }
 
@@ -58,6 +57,7 @@ body {
 
 .intro__image {
   width: 100%;
+  display: block;
 }
 
 .intro__text {
@@ -65,4 +65,26 @@ body {
   position: absolute;
   bottom: 8px;
   left: 16px;
+}
+
+.projects {
+  text-align: center;
+}
+
+.projects__header {
+  position: relative;
+  margin-top: $significant--px;
+  padding-bottom: $immense--px;
+  margin-bottom: $immense--px;
+
+  &:after {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 42px) rotate(-78deg);
+    display: block;
+    content: ' ';
+    background-image: url('../images/arrow-mobile.svg');
+    height: 15px;
+    width: 51px;
+  }
 }
