@@ -4,9 +4,12 @@
 }
 
 // basic styles
-$base-font-size: 18px;
-$base-font-family: 'PT Mono', monospace;
-$base-line-height: 1.5;
+$font-size-mobile: 15px;
+$font-size-mobile-heading: 18px;
+$font-family: 'PT Mono', monospace;
+$line-height: 1.5;
+
+
 
 // distances
 $minor--px: 10px;
@@ -34,9 +37,9 @@ html {
 }
 
 body {
-  font-size: $base-font-size;
-  font-family: $base-font-family;
-  line-height: $base-line-height;
+  font-size: $font-size-mobile;
+  font-family: $font-family;
+  line-height: $line-height;
 }
 
 .content-container {
@@ -60,6 +63,7 @@ body {
 }
 
 .intro__image-container::after {
+  // make shadow for readibility of text on postcard image
   width: 100%;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 35%);
   bottom: 0;
@@ -81,6 +85,8 @@ body {
   position: absolute;
   bottom: $minor--px;
   left: $minor--px;
+  font-size: $font-size-mobile-heading;
+  margin: 0;
 }
 
 .projects {
@@ -89,6 +95,7 @@ body {
 
 .projects__header {
   font-weight: bold;
+  font-size: $font-size-mobile-heading;
   position: relative;
   margin-top: $significant--px;
   padding-bottom: $significant--px;
