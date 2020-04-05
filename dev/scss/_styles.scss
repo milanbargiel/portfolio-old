@@ -73,7 +73,6 @@ a {
 }
 
 .nav__github {
-  color: $blue;
   margin: 10px 0 12px auto;
 
   @media screen and (min-width: $bp-tablet) {
@@ -151,6 +150,14 @@ a {
     background-color: $white;
     opacity: .7;
   }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &::after {
+      opacity: 1;
+    }
+  }
 }
 
 .underlined-link--black {
@@ -160,6 +167,34 @@ a {
     bottom: -1px;
     background-color: $black;
     opacity: .3;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &::after {
+      opacity: .5;
+    }
+  }
+}
+
+.link {
+  color: $blue;
+  position: relative;
+
+  &:hover,
+  &:focus,
+  &:active {
+    &::after {
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      bottom: -1px;
+      background-color: $blue;
+      opacity: .6;
+    }
   }
 }
 
