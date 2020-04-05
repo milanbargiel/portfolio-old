@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="22px" height="10px" viewBox="0 0 22 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
-    <title>Line 2</title>
+    <title>Artboard</title>
     <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop" transform="translate(-788.000000, -6901.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <path id="Line-2" d="M797.323596,6901.5651 L797.929,6905.518 L808.448857,6903.90666 L808.943086,6903.83091 L809.094585,6904.81937 L808.600356,6904.89512 L798.081,6906.507 L798.687088,6910.46121 L789.109226,6907.37665 L797.323596,6901.5651 Z"></path>
-        </g>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path id="Line-2" d="M8.33768755,0.807010139 L8.943,4.76 L20.6739649,2.96296058 L21.1681936,2.88721104 L21.3196927,3.87566843 L20.825464,3.95141798 L9.095,5.749 L9.7011794,9.70312671 L0.123316906,6.61856027 L8.33768755,0.807010139 Z" fill="#FFFFFF" fill-rule="nonzero"></path>
     </g>
 </svg>
