@@ -4,8 +4,10 @@
 }
 
 // basic styles
-$font-size-mobile: 15px;
-$font-size-mobile-heading: 18px;
+$font-size-mobile-small: 15px;
+$font-size-desktop-small: 15px;
+$font-size-mobile-large: 18px;
+$font-size-desktop-large: 18px;
 $font-family: 'PT Mono', monospace;
 $line-height: 1.5;
 $letter-spacing: 0.03em;
@@ -20,7 +22,7 @@ $immense--px: 80px;
 $gigantic--px: 100px;
 
 // content lengths
-$max-page-width: 1000px;
+$max-page-width: 960px;
 
 // colors
 $white: #fff;
@@ -43,10 +45,14 @@ html {
 
 body {
   color: $black;
-  font-size: $font-size-mobile;
+  font-size: $font-size-mobile-small;
   font-family: $font-family;
   line-height: $line-height;
   letter-spacing: $letter-spacing;
+
+  @media screen and (min-width: $bp-tablet) {
+    font-size: $font-size-desktop-large;
+  }
 }
 
 a {
@@ -58,7 +64,6 @@ a {
   max-width: $max-page-width;
 
   @media screen and (min-width: $bp-tablet) {
-    padding: 0;
     margin: 0 auto;
   }
 }
@@ -70,6 +75,11 @@ a {
 .nav__github {
   color: $blue;
   margin: 10px 0 12px auto;
+
+  @media screen and (min-width: $bp-tablet) {
+    margin: 20px 0 30px auto;
+    font-size: $font-size-desktop-small;
+  }
 }
 
 .intro {
@@ -78,7 +88,19 @@ a {
 
   @media screen and (min-width: $bp-tablet) {
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 440px;
+  }
+
+  &:after {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    transform: rotate(-83deg);
+    display: block;
+    content: ' ';
+    background-image: url('../images/arrow-mobile.svg');
+    height: 10px;
+    width: 22px;
   }
 }
 
@@ -105,7 +127,7 @@ a {
   position: absolute;
   bottom: $minor--px;
   left: $minor--px;
-  font-size: $font-size-mobile-heading;
+  font-size: $font-size-mobile-large;
   margin: 0;
 }
 
@@ -147,42 +169,42 @@ a {
 
 .projects__header {
   font-weight: bold;
-  font-size: $font-size-mobile-heading;
+  font-size: $font-size-mobile-large;
   position: relative;
-  margin-top: $significant--px;
-  padding-bottom: $significant--px;
+  margin-top: $gigantic--px;
   margin-bottom: $immense--px;
-
-  &:after {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 36px) rotate(-78deg);
-    display: block;
-    content: ' ';
-    background-image: url('../images/arrow-mobile.svg');
-    height: 15px;
-    width: 51px;
-  }
 }
 
 .project {
   text-align: left;
   margin-bottom: $immense--px;
+}
 
-  &:last-child {
-    margin-bottom: $gigantic--px;
+@media screen and (min-width: $bp-tablet) {
+  .project--tile {
+    margin-bottom: 0;
+    margin-right: 30px;
+
+    &:first-child {
+      margin-right: 0;
+    }
   }
 }
+
 
 .project__image {
   width: 100%;
   margin-bottom: $minor--px;
 }
 
-@media screen and (min-width: $bp-tablet) {
-  .project-container {
+.project-container {
+  margin-bottom: $gigantic--px;
+
+  @media screen and (min-width: $bp-tablet) {
     align-items: center;
     display: flex;
+    flex-direction: row-reverse;
+    font-size: $font-size-desktop-small;
   }
 }
 
@@ -191,6 +213,8 @@ a {
 
   @media screen and (min-width: $bp-tablet) {
     display: flex;
+    font-size: $font-size-desktop-small;
+    margin-bottom: 10px;
   }
 }
 
