@@ -8,8 +8,7 @@ $font-size-mobile: 15px;
 $font-size-mobile-heading: 18px;
 $font-family: 'PT Mono', monospace;
 $line-height: 1.5;
-
-
+$letter-spacing: 0.03em;
 
 // distances
 $minor--px: 10px;
@@ -23,6 +22,7 @@ $immense--px: 80px;
 $max-page-width: 1000px;
 
 // colors
+$white: #fff;
 $blue: #1934da;
 
 html {
@@ -40,6 +40,11 @@ body {
   font-size: $font-size-mobile;
   font-family: $font-family;
   line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+a {
+  text-decoration: none;
 }
 
 .content-container {
@@ -54,7 +59,6 @@ body {
 .nav__github {
   color: $blue;
   margin: 10px 0 12px auto;
-  text-decoration: none;
 }
 
 .intro {
@@ -81,12 +85,22 @@ body {
 }
 
 .intro__text {
-  color: white;
+  color: $white;
   position: absolute;
   bottom: $minor--px;
   left: $minor--px;
   font-size: $font-size-mobile-heading;
   margin: 0;
+}
+
+.intro__mail-link {
+  position: relative;
+  color: $white;
+  display: inline-block;
+
+  &::after {
+    @include underline($white);
+  }
 }
 
 .projects {
