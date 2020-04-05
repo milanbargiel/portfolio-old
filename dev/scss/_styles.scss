@@ -17,12 +17,14 @@ $slight--px: 18px;
 // $great--px: 50px;
 $significant--px: 68px;
 $immense--px: 80px;
+$gigantic--px: 100px;
 
 // content lengths
 $max-page-width: 1000px;
 
 // colors
 $white: #fff;
+$black: #252525;
 $blue: #1934da;
 
 html {
@@ -37,6 +39,7 @@ html {
 }
 
 body {
+  color: $black;
   font-size: $font-size-mobile;
   font-family: $font-family;
   line-height: $line-height;
@@ -93,13 +96,35 @@ a {
   margin: 0;
 }
 
-.intro__mail-link {
+.underlined-link {
   position: relative;
-  color: $white;
-  display: inline-block;
 
   &::after {
-    @include underline($white);
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.underlined-link--white {
+  color: $white;
+
+  &::after {
+    bottom: -3px;
+    background-color: $white;
+    opacity: .7;
+  }
+}
+
+.underlined-link--black {
+  color: $black;
+
+  &::after {
+    bottom: -1px;
+    background-color: $black;
+    opacity: .3;
   }
 }
 
@@ -130,9 +155,17 @@ a {
 .project {
   text-align: left;
   margin-bottom: $immense--px;
+
+  &:last-child {
+    margin-bottom: $gigantic--px;
+  }
 }
 
 .project__image {
   width: 100%;
   margin-bottom: $minor--px;
+}
+
+.footer {
+  margin-bottom: 4px;
 }
