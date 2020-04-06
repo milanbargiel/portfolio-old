@@ -1,15 +1,26 @@
-.content-container--imprint {
-  font-size: $font-size-large;
+.body-imprint {
   background-color: $light-blue;
+}
+
+.content-container--imprint {
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-large;
+  min-height: 100vh;
 }
 
 .imprint {
   padding-top: 14px;
   margin-bottom: $significant--px;
+  flex: 1;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding-top: $slight--px;
+  }
 }
 
 .imprint__arrow {
-  margin-bottom: $minor--px;
+  margin-bottom: $slight--px;
   display: block;
 }
 
@@ -19,8 +30,6 @@
 
 .gdpr {
   margin-bottom: $gigantic--px;
-}
-
-.gdpr__heading {
-  font-weight: bold;
+  flex: 1;
+  max-width: 900px;
 }

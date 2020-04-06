@@ -20,7 +20,8 @@ $immense--px: 80px;
 $gigantic--px: 100px;
 
 // content lengths
-$max-page-width: 960px;
+$max-page-width: 900px;
+$max-page-width-desktop: 1120px;
 
 // colors
 $white: #fff;
@@ -30,6 +31,7 @@ $blue: #1934da;
 
 // breakpoints
 $bp-tablet: 680px;
+$bp-desktop: 1200px;
 
 html {
   box-sizing: border-box;
@@ -66,6 +68,10 @@ h1 {
 
   @media screen and (min-width: $bp-tablet) {
     margin: 0 auto;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    max-width: $max-page-width-desktop;
   }
 }
 
@@ -243,12 +249,12 @@ h1 {
 }
 
 .footer {
-  margin-bottom: 4px;
+  padding-bottom: 4px;
 
   @media screen and (min-width: $bp-tablet) {
     display: flex;
     font-size: $font-size-small;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
   }
 }
 
