@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ title }}</title>
-    <meta name="description" content="Boilerplate by Milan Bargiel">
+    <meta name="description" content="Hello, I am Milan Bargiel, a product owner, developer & designer based in Berlin.">
+    <meta name="keywords" content="Product owner, Milan Bargiel, Journalism, Web development, Design">
 
     <!-- Mobile Specific Metas
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -21,10 +22,10 @@
     <link rel="icon" type="image/png" href="images/favicon.ico">
 </head>
 <body>
-    <div class="content-container {{#if isImprint}} content-container--imprint {{/if}}">
+    <div class="content-container {{#if isLegalNotice}} content-container--legal-notice {{/if}}">
         {{> @partial-block }}
         <footer class="footer">
-            Copyright ©&nbsp;<a class="blue-link" href="mailto:info@milanbargiel.com">Milan Bargiel</a>, 2020<br> <a class="footer__imprint blue-link" href="/imprint.html">imprint & privacy</a>
+            Copyright ©&nbsp;<a class="blue-link" href="mailto:info@milanbargiel.com">Milan Bargiel</a>, 2020<br> <a class="footer__legal-notice blue-link" href="/legal-notice.html">legal notice</a>
         </footer>
     </div>
     

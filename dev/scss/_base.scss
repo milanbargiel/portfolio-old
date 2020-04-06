@@ -57,6 +57,12 @@ h2 {
   }
 }
 
+@media screen and (min-width: $bp-tablet) {
+  .footer__legal-notice {
+    margin-left: auto;
+  }
+}
+
 // lazy loading
 img {
   opacity: 1;

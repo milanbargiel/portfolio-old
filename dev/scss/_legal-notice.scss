@@ -1,5 +1,5 @@
-// Specific styles for imprint page
-.content-container--imprint {
+// Specific styles for legal notice page
+.content-container--legal-notice {
   display: flex;
   flex-direction: column;
   font-size: $font-size-large;
@@ -7,7 +7,12 @@
   background-color: $light-blue;
 }
 
-.imprint {
+.back-arrow {
+  margin-bottom: $slight--px;
+  display: block;
+}
+
+.contact {
   padding-top: 14px;
   margin-bottom: $significant--px;
   flex: 1;
@@ -17,12 +22,7 @@
   }
 }
 
-.imprint__arrow {
-  margin-bottom: $slight--px;
-  display: block;
-}
-
-.imprint__header {
+.contact__header {
   font-size: $font-size-large;
 }
 
@@ -30,11 +30,4 @@
   margin-bottom: $gigantic--px;
   flex: 1;
   max-width: 900px;
-}
-
-
-@media screen and (min-width: $bp-tablet) {
-  .footer__imprint {
-    margin-left: auto;
-  }
 }
