@@ -1,3 +1,4 @@
+// Specific styles for imprint page
 .content-container--imprint {
   display: flex;
   flex-direction: column;
@@ -29,4 +30,11 @@
   margin-bottom: $gigantic--px;
   flex: 1;
   max-width: 900px;
+}
+
+
+@media screen and (min-width: $bp-tablet) {
+  .footer__imprint {
+    margin-left: auto;
+  }
 }

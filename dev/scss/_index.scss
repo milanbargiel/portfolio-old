@@ -1,0 +1,106 @@
+// Specific styles for index page
+.nav {
+  display: flex;
+}
+
+.nav__github {
+  margin: 10px 0 12px auto;
+
+  @media screen and (min-width: $bp-tablet) {
+    margin: 20px 0 30px auto;
+    font-size: $font-size-small;
+  }
+}
+
+.postcard {
+  position: relative;
+  margin: 0 (-$minor--px); // make postcard fullwidth on mobile
+
+  @media screen and (min-width: $bp-tablet) {
+    margin: 0 auto;
+    max-width: 440px;
+  }
+
+  // include svg arrow
+  &:after {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    transform: rotate(-82deg);
+    display: block;
+    content: ' ';
+    background-image: url('../images/arrow-intro-image.svg');
+    height: 10px;
+    width: 22px;
+  }
+}
+
+// produce shadow at bottom of image to enhance readibility of white text
+.postcard__image-container::after {
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 25%);
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.postcard__image {
+  width: 100%;
+  display: block;
+}
+
+.postcard__text {
+  color: $white;
+  position: absolute;
+  bottom: $minor--px;
+  left: $minor--px;
+  text-rendering: optimizeLegibility;
+}
+
+.projects {
+  text-align: center;
+}
+
+.projects__header {
+  font-weight: bold;
+  font-size: $font-size-large;
+  margin: $gigantic--px 0 $immense--px;
+}
+
+.project {
+  text-align: left;
+  margin-bottom: $immense--px;
+  width: 100%;
+}
+
+.project__image {
+  width: 100%;
+  padding-bottom: $minor--px;
+}
+
+// container for displaying projects in a row layout
+.project-container {
+  margin-bottom: $gigantic--px;
+
+  @media screen and (min-width: $bp-tablet) {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: $font-size-small;
+  }
+}
+
+@media screen and (min-width: $bp-tablet) {
+  .project--tile {
+    margin-bottom: 0;
+    margin-right: $modest--px;
+
+    &:first-child {
+      margin-right: 0;
+    }
+  }
+}

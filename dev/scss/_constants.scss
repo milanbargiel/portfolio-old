@@ -1,0 +1,29 @@
+// basic styles
+$font-size-small: 15px;
+$font-size-large: 18px;
+$font-family: 'PT Mono', monospace;
+$line-height: 1.5;
+$letter-spacing: 0.03em;
+
+// distances
+$minor--px: 10px;
+$slight--px: 18px;
+$modest--px: 30px;
+// $great--px: 50px;
+$significant--px: 68px;
+$immense--px: 80px;
+$gigantic--px: 100px;
+
+// content lengths
+$max-page-width: 900px;
+$max-page-width-desktop: 1120px;
+
+// colors
+$white: #fff;
+$black: #252525;
+$light-blue: #ebfffe;
+$blue: #1934da;
+
+// breakpoints
+$bp-tablet: 680px;
+$bp-desktop: 1200px;
