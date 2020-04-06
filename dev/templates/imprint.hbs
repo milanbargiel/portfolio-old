@@ -1,0 +1,14 @@
+{{! render content in _layout partial; pass title to _layout partial}}
+{{#> _layout title='imprint & gdpr — milan bargiel' isImprint=' ' }}
+<header class="imprint">
+    <a href="/index.html"><img class="imprint__arrow" src="images/arrow-imprint.svg"></a>
+    <h1 class="imprint__header">Imprint</h1>
+    <div>Milan Bargiel<br>Fuldastraße 42<br>12045 Berlin<br><a class="underlined-link underlined-link--black" href="mailto:info@milanbargiel.com">info@milanbargiel.com</a></div>
+</header>
+<main class="gdpr">
+    <h3 class="gdpr__heading">Data Protection Policy (GDPR)</h3>
+    <p>This website does not collect, store or process Personally Identifiable Information (PII). This website does not require the use of cookies.</p>
+    <h3>Third Party Inclusion</h3>
+    <p>This website is hosted by <a class="underlined-link underlined-link--black" href="https://github.com/" target="_blank">Github</a> using <a class="underlined-link underlined-link--black" href="https://help.github.com/en/github/working-with-github-pages/about-github-pages" target="_blank">Github Pages</a>. The Github Global Privacy Practices are available <a class="underlined-link underlined-link--black" href="https://help.github.com/en/github/site-policy/global-privacy-practices" target="_blank">here</a>.</p>
+</main>
+{{/_layout}}

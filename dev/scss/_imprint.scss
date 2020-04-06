@@ -1,0 +1,26 @@
+.content-container--imprint {
+  font-size: $font-size-large;
+  background-color: $light-blue;
+}
+
+.imprint {
+  padding-top: 14px;
+  margin-bottom: $significant--px;
+}
+
+.imprint__arrow {
+  margin-bottom: $minor--px;
+  display: block;
+}
+
+.imprint__header {
+  font-size: $font-size-large;
+}
+
+.gdpr {
+  margin-bottom: $gigantic--px;
+}
+
+.gdpr__heading {
+  font-weight: bold;
+}

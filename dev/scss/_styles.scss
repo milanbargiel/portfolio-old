@@ -4,10 +4,8 @@
 }
 
 // basic styles
-$font-size-mobile-small: 15px;
-$font-size-desktop-small: 15px;
-$font-size-mobile-large: 18px;
-$font-size-desktop-large: 18px;
+$font-size-small: 15px;
+$font-size-large: 18px;
 $font-family: 'PT Mono', monospace;
 $line-height: 1.5;
 $letter-spacing: 0.03em;
@@ -27,6 +25,7 @@ $max-page-width: 960px;
 // colors
 $white: #fff;
 $black: #252525;
+$light-blue: #ebfffe;
 $blue: #1934da;
 
 // breakpoints
@@ -45,18 +44,20 @@ html {
 
 body {
   color: $black;
-  font-size: $font-size-mobile-small;
+  font-size: $font-size-small;
   font-family: $font-family;
   line-height: $line-height;
   letter-spacing: $letter-spacing;
-
-  @media screen and (min-width: $bp-tablet) {
-    font-size: $font-size-desktop-large;
-  }
 }
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  font-size: $font-size-large;
+  font-weight: 400;
+  margin: 0;
 }
 
 .content-container {
@@ -77,7 +78,7 @@ a {
 
   @media screen and (min-width: $bp-tablet) {
     margin: 20px 0 30px auto;
-    font-size: $font-size-desktop-small;
+    font-size: $font-size-small;
   }
 }
 
@@ -126,8 +127,6 @@ a {
   position: absolute;
   bottom: $minor--px;
   left: $minor--px;
-  font-size: $font-size-mobile-large;
-  margin: 0;
 }
 
 .underlined-link {
@@ -204,7 +203,7 @@ a {
 
 .projects__header {
   font-weight: bold;
-  font-size: $font-size-mobile-large;
+  font-size: $font-size-large;
   position: relative;
   margin-top: $gigantic--px;
   margin-bottom: $immense--px;
@@ -239,7 +238,7 @@ a {
     align-items: center;
     display: flex;
     flex-direction: row-reverse;
-    font-size: $font-size-desktop-small;
+    font-size: $font-size-small;
   }
 }
 
@@ -248,7 +247,7 @@ a {
 
   @media screen and (min-width: $bp-tablet) {
     display: flex;
-    font-size: $font-size-desktop-small;
+    font-size: $font-size-small;
     margin-bottom: 10px;
   }
 }
