@@ -113,7 +113,7 @@ h1 {
 .intro__image-container::after {
   // make shadow for readibility of text on postcard image
   width: 100%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 35%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 35%);
   bottom: 0;
   content: "";
   height: 100%;
@@ -133,6 +133,7 @@ h1 {
   position: absolute;
   bottom: $minor--px;
   left: $minor--px;
+  text-rendering: optimizeLegibility;
 }
 
 .underlined-link {

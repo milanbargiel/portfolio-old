@@ -1,12 +1,9 @@
-.body-imprint {
-  background-color: $light-blue;
-}
-
 .content-container--imprint {
   display: flex;
   flex-direction: column;
   font-size: $font-size-large;
   min-height: 100vh;
+  background-color: $light-blue;
 }
 
 .imprint {
