@@ -1,7 +1,14 @@
 // global styles
 @font-face {
-  font-family: 'PT Mono';
-  src: url('../assets/PTMono-Regular.ttf');
+  font-family: 'Overpass Mono';
+  src: url('../assets/OverpassMono-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Overpass Mono';
+  src: url('../assets/OverpassMono-Bold.ttf');
+  font-weight: bold;
 }
 
 html {

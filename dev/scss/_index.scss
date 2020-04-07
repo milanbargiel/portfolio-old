@@ -29,7 +29,7 @@
     transform: rotate(-82deg);
     display: block;
     content: ' ';
-    background-image: url('../images/arrow-intro-image.svg');
+    background-image: url('../assets/images/arrow-intro-image.svg');
     height: 10px;
     width: 22px;
   }
@@ -38,7 +38,7 @@
 // produce shadow at bottom of image to enhance readibility of white text
 .postcard__image-container::after {
   width: 100%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 25%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 35%);
   bottom: 0;
   content: "";
   height: 100%;
@@ -46,6 +46,10 @@
   position: absolute;
   right: 0;
   top: 0;
+
+  @media screen and (min-width: $bp-tablet) {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 25%);
+  }
 }
 
 .postcard__image {
