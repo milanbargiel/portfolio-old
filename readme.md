@@ -8,14 +8,14 @@
 ### Folder structure
 ```bash
 ├── dev
-|   ├── fonts
-|   ├── images
+|   ├── assets
+|   |   └── images
 |   ├── js
 |   ├── scss
 |   └── templates
 ├── dist
-|   ├── fonts
-|   ├── images
+|   ├── assets
+|   |   └── images
 |   ├── js
 |   ├── index.html
 |   └── main.css
@@ -37,7 +37,7 @@
 - Copy to dist folder
 - Reload Browser
 
-**When font file changes:**
+**When asset file changes:**
 - Copy to dist folder
 - Reload Browser
 
