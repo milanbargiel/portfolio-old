@@ -10,3 +10,7 @@ Thumbs.db
 # Other files
 node_modules/
 dist/
+
+# Ignore Apercu Font files
+apercu-mono-regular.woff
+apercu-mono-regular.woff2

@@ -1,15 +1,14 @@
 // global styles
 @font-face {
-  font-family: 'Overpass Mono';
-  src: url('../assets/OverpassMono-Regular.ttf');
-  font-weight: normal;
+  font-family: 'apercu-mono-regular';
+  src: url('../assets/apercu-mono-regular.woff2') format('woff2'), url('../assets/apercu-mono-regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Overpass Mono';
-  src: url('../assets/OverpassMono-Bold.ttf');
-  font-weight: bold;
+  font-family: 'PT Mono';
+  src: url('../assets/PTMono-Regular.ttf');
 }
+
 
 html {
   box-sizing: border-box;
