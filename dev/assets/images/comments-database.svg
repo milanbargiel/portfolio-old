@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="154px" height="214px" viewBox="0 0 154 214" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-9" transform="translate(5.000000, 4.000000)">
+            <path d="M144.5,35.5 L0.500179286,35.5 L0.552691348,181.973859 C0.910255262,185.273062 3.06677763,188.391605 6.62874025,191.239421 C10.4229708,194.272937 15.8088214,196.990246 22.4006068,199.264874 C35.3914555,203.747628 53.048696,206.5 72.5,206.5 C91.9485048,206.5 109.603462,203.748413 122.600329,199.266735 C129.196752,196.992106 134.588822,194.274634 138.391683,191.240882 C141.962536,188.392216 144.129468,185.272667 144.5,181.972392 L144.5,35.5 Z" id="Rectangle" stroke="#979797"></path>
+            <text id="Comments-Database" font-family="Apercu-Mono, Apercu Mono" font-size="20" font-weight="normal" fill="#000000">
+                <tspan x="23" y="119">Comments</tspan>
+                <tspan x="23" y="143">Database</tspan>
+            </text>
+            <ellipse id="Oval" stroke="#979797" fill="#D8D8D8" cx="72.5" cy="34.5" rx="72.5" ry="34.5"></ellipse>
+        </g>
+    </g>
+</svg>
