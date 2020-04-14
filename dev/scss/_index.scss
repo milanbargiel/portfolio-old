@@ -77,34 +77,30 @@
 
 .project {
   text-align: left;
-  margin-bottom: $immense--px;
+  margin-bottom: $enormous--px;
   width: 100%;
-
-  @media screen and (min-width: $bp-tablet) {
-    // margin-left: auto;
-    // margin-right: auto;
-    margin-bottom: $enormous--px;
-  }
 }
 
+// make secondary project smaller on desktop
 @media screen and (min-width: $bp-tablet) {
   .project--secondary {
     width: 45%;
-    margin-bottom: $enormous--px;
   }
 }
 
 .project__image {
   width: 100%;
-  padding-bottom: $minor--px;
+  padding-bottom: $slight--px;
 }
 
 .project__image--comments {
   display: block;
-  width: 96px;
   margin-left: $enormous--px;
-  padding-top: $great--px;
-  padding-bottom: $slight--px;
+  padding-top: $modest--px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding-top: $great--px;
+  }
 }
 
 // container for displaying projects in a row layout
@@ -114,7 +110,6 @@
   @media screen and (min-width: $bp-tablet) {
     align-items: center;
     display: flex;
-    flex-direction: row-reverse;
     font-size: $font-size-small;
   }
 }
@@ -124,7 +119,7 @@
     margin-bottom: 0;
     margin-right: $significant--px;
 
-    &:first-child {
+    &:last-child {
       margin-right: 0;
     }
   }
@@ -163,7 +158,11 @@ img[data-src] {
 }
 
 .lazy-container--comments {
-  padding-bottom: 39.5%;
+  padding-bottom: 50%;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding-bottom: 39.5%;
+  }
 
   & img {
     width: auto;
