@@ -20,19 +20,6 @@
     margin: 0 auto;
     max-width: 440px;
   }
-
-  // include svg arrow
-  &:after {
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
-    transform: rotate(-82deg);
-    display: block;
-    content: ' ';
-    background-image: url('../assets/images/arrow-intro-image.svg');
-    height: 10px;
-    width: 22px;
-  }
 }
 
 // produce shadow at bottom of image to enhance readibility of white text
@@ -70,9 +57,21 @@
 }
 
 .projects__header {
+  position: relative;
   font-weight: bold;
   font-size: $font-size-large;
-  margin: $enormous--px 0 $gigantic--px;
+  margin: $huge--px 0 $huge--px;
+
+  &:after {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 36px) rotate(-80deg);
+    display: block;
+    content: ' ';
+    background-image: url('../assets/images/arrow-mobile.svg');
+    height: 15px;
+    width: 51px;
+  }
 }
 
 .project {
@@ -95,7 +94,6 @@
 
 .project__image--comments {
   display: block;
-  margin-left: $enormous--px;
   padding-top: $modest--px;
 
   @media screen and (min-width: $bp-tablet) {
@@ -112,6 +110,18 @@
     display: flex;
     font-size: $font-size-small;
   }
+
+  &:last-of-type {
+    margin-bottom: $monstrous--px;
+  }
+}
+
+@media screen and (min-width: $bp-tablet) {
+  .project-container--small {
+    width: 82%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (min-width: $bp-tablet) {
@@ -124,6 +134,13 @@
     }
   }
 }
+
+@media screen and (min-width: $bp-tablet) {
+  .project--tile-wide {
+    width: 200%;
+  }
+}
+
 
 // lazy loading
 img {
@@ -161,11 +178,13 @@ img[data-src] {
   padding-bottom: 55%;
 
   @media screen and (min-width: $bp-tablet) {
-    padding-bottom: 39.5%;
+    padding-bottom: 72%;
   }
 
   & img {
     width: auto;
+    left: 50%;
+    margin-left: -15%;
   }
 }
 

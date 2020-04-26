@@ -31,7 +31,7 @@
     "serve": "browser-sync start --server 'dist' --files 'dist'",
     "prestart": "npm run --silent build",
     "start": "npm-run-all --parallel serve watch",
-    "deploy": "scp -r dist/* milanbargiel.com:/var/www/milanbargiel.com"
+    "deploy": "scp -r dist/* ownserver:/var/www/milanbargiel.com"
   },
   "scriptsComments": {
     "stylelint": "lint scss-files with rules specified in .stylelintrc.json",
