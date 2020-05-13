@@ -54,13 +54,20 @@ h2 {
 }
 
 .footer {
-  padding-bottom: 4px;
+  padding-bottom: $minor--px;
   padding-top: 20px;
 
   @media screen and (min-width: $bp-tablet) {
     text-align: center;
     font-size: $font-size-small;
-    padding-bottom: $slight--px;
+  }
+}
+
+.footer__copyright {
+  display: none;
+  
+  @media screen and (min-width: $bp-tablet) {
+    display: inline;
   }
 }
 
