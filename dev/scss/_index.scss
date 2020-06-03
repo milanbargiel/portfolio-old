@@ -139,11 +139,17 @@
 @media screen and (min-width: $bp-tablet) {
   .project--tile {
     margin-bottom: 0;
-    margin-right: $immense--px;
+    margin-right: $significant--px;
 
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+@media screen and (min-width: $bp-desktop) {
+  .project--tile {
+    margin-right: $immense--px;
   }
 }
 

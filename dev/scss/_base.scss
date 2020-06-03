@@ -54,12 +54,16 @@ h2 {
 }
 
 .footer {
-  padding-bottom: 20px;
   padding-top: 20px;
+  padding-bottom: $minor--px;
 
   @media screen and (min-width: $bp-tablet) {
     text-align: center;
     font-size: $font-size-small;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    padding-bottom: 20px;
   }
 }
 
