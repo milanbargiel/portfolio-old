@@ -14,7 +14,7 @@
     "scss": "node-sass 'dev/scss' --output 'dist'",
     "postcss": "postcss --use autoprefixer --replace 'dist/*.css' --no-map",
     "copyfiles": "copyfiles --up 2 'dev/assets/*' 'dist/assets'",
-    "copyjs":"copyfiles --up 2 'dev/js/**/*.js' 'dist/js'",
+    "copyjs": "copyfiles --up 2 'dev/js/**/*.js' 'dist/js'",
     "eslint": "eslint 'dev/js'",
     "build:css": "npm-run-all --serial stylelint scss postcss",
     "build:html": "hbs 'dev/templates/[!_]*.hbs' --partial 'dev/templates/_*.hbs' --output 'dist/'",
