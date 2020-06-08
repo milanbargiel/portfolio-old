@@ -222,3 +222,37 @@ img[data-src] {
 .lazy-container--ebertplatz {
   padding-bottom: 101.8%;
 }
+
+.pop-up-wrapper {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 999999;
+  display: none;
+  height: 100%;
+  padding-top: 8%;
+  background-color: rgba(0, 0, 0, 0.14);
+}
+
+.pop-up {
+  width: 90vw;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+
+  @media screen and (min-width: $bp-tablet) {
+    width: 60vw;
+  }
+
+  &__close {
+    color: $blue;
+    float: right;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

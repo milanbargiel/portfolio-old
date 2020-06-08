@@ -1,4 +1,6 @@
 const images = document.querySelectorAll('img[data-src]');
+const popUpWrappers = document.querySelectorAll('.js-pop-up-wrapper');
+
 images.forEach((img) => {
   const hasSrcSet = img.getAttribute('data-srcset');
   img.setAttribute('src', img.getAttribute('data-src'));
@@ -12,4 +14,24 @@ images.forEach((img) => {
       img.removeAttribute('data-srcset');
     }
   });
+  // show project description modal on click
+  img.addEventListener('click', () => {
+    const project = img.parentNode.parentNode;
+    project.querySelector('.js-pop-up-wrapper').style.display = 'block';
+  });
+});
+
+// close popups on click or esc key
+popUpWrappers.forEach((wrapper) => {
+  wrapper.addEventListener('click', () => {
+    wrapper.removeAttribute('style');
+  });
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    popUpWrappers.forEach((wrapper) => {
+      wrapper.removeAttribute('style');
+    });
+  }
 });
