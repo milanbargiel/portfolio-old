@@ -128,19 +128,12 @@ h2 {
 .blue-link {
   color: $blue;
   position: relative;
+  padding: 4px 10px;
 
   &:hover,
   &:focus,
   &:active {
-    &::after {
-      content: "";
-      height: 1px;
-      left: 0;
-      position: absolute;
-      width: 100%;
-      bottom: -1px;
-      background-color: $blue;
-      opacity: .6;
-    }
+    filter: blur(1px);
+    background-color: $violet-blue;
   }
 }
