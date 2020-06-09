@@ -1,9 +1,8 @@
+const postCardImage = document.querySelector('.js-postcard-image');
 const projects = document.querySelectorAll('.js-project');
 const popUpWrappers = document.querySelectorAll('.js-pop-up-wrapper');
 
-projects.forEach((project) => {
-  const popUpWrapper = project.querySelector('.js-pop-up-wrapper');
-  const img = project.querySelector('img[data-src]');
+function lazyLoadImage(img) {
   const hasSrcSet = img.getAttribute('data-srcset');
   img.setAttribute('src', img.getAttribute('data-src'));
 
@@ -18,8 +17,22 @@ projects.forEach((project) => {
       img.removeAttribute('data-srcset');
     }
   });
+}
+
+lazyLoadImage(postCardImage);
+
+projects.forEach((project) => {
+  const popUpWrapper = project.querySelector('.js-pop-up-wrapper');
+  const showPopUpButton = project.querySelector('.js-show-pop-up');
+  const img = project.querySelector('img[data-src]');
+
+  lazyLoadImage(img);
 
   img.addEventListener('click', () => {
+    popUpWrapper.setAttribute('style', 'display: block;');
+  });
+
+  showPopUpButton.addEventListener('click', () => {
     popUpWrapper.setAttribute('style', 'display: block;');
   });
 

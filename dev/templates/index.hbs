@@ -6,7 +6,7 @@
 <header class="postcard">
     <div class="postcard__image-container lazy-container lazy-container--italia">
         {{! 2x for high resolution displays (retina) }}
-        <img class="postcard__image" data-src="assets/images/italia-fun.jpg" data-srcset="assets/images/italia-fun.jpg 1x, assets/images/italia-fun@2x.jpg 2x" alt="Men playing with water in Sicily">
+        <img class="postcard__image js-postcard-image" data-src="assets/images/italia-fun.jpg" data-srcset="assets/images/italia-fun.jpg 1x, assets/images/italia-fun@2x.jpg 2x" alt="Men playing with water in Sicily">
     </div>
     <h1 class="postcard__text">Hello, I am Milan Bargiel, a product owner, developer & designer based in Berlin. Feel free to contact me: <a class="underlined-link underlined-link--white" href="mailto:info@milanbargiel.com">info@milanbargiel.com</a></h1>
 </header>
@@ -17,7 +17,7 @@
             <div class="lazy-container lazy-container--kosmo">
                 <img class="project__image" data-src="assets/images/planet-page-prototype.jpg" data-srcset="assets/images/planet-page-prototype.jpg 1x, assets/images/planet-page-prototype@2x.jpg 2x" alt="Kosmo – A web application for visually collecting thoughts">
             </div>
-            <a class="underlined-link underlined-link--black" href="assets/milan-bargiel_bachelorthesis.pdf" target="_blank">Kosmo</a> – A real-time web application for visually collecting thoughts /  
+            <span class="underlined-link underlined-link--black js-show-pop-up">Kosmo</span> – A real-time web application for visually collecting thoughts /  
             D3.js / Meteor
             {{> _kosmo }}
         </div>
@@ -25,7 +25,7 @@
             <div class="lazy-container lazy-container--comments">
                 <img class="project__image project__image--comments" data-src="assets/images/comments-database.svg" alt="A database for comment data">
             </div>
-            A high-end commenting database for news website <a class="underlined-link underlined-link--black" href="https://www.zeit.de/index" target="_blank">ZEIT ONLINE</a> / Product Owner / PostgreSQL / Kubernetes Cluster
+            <span class="underlined-link underlined-link--black js-show-pop-up">A high-end comments database</span> for news website ZEIT ONLINE / Product Owner / Agile Development
             {{> _comments }}
         </div>
     </div>
@@ -34,21 +34,21 @@
             <div class="lazy-container lazy-container--abweichungen">
                 <img class="project__image" data-src="assets/images/abweichungen.jpg" data-srcset="assets/images/abweichungen.jpg 1x, assets/images/abweichungen@2x.jpg 2x" class="Web page of media artist Maurits Boettger">
             </div>
-            <a class="underlined-link underlined-link--black" href="https://abweichungenausderzeit.de/" target="_blank">Abweichungen aus der Zeit</a> – Web page for artist Maurits Boettger / Design / Web Development
+            <span class="underlined-link underlined-link--black js-show-pop-up">Abweichungen aus der Zeit</span> – Web page for artist Maurits Boettger / Design / Web Development
             {{> _abweichungen }}
         </div>
         <div class="project project--tile js-project">
             <div class="lazy-container lazy-container--ds">
                 <img class="project__image" data-src="assets/images/dspricht.jpg" data-srcset="assets/images/dspricht.jpg 1x, assets/images/dspricht@2x.jpg 2x" alt="Online questionnaire of Deutschland spricht in 2017">
             </div>
-            <a class="underlined-link underlined-link--black" href="https://www.grimme-online-award.de/archiv/2018/preistraeger/p/d/deutschland-spricht-1/" target="_blank">Deutschland spricht</a> – A political dating platform for news website <a class="underlined-link underlined-link--black" href="https://www.zeit.de/index" target="_blank">ZEIT ONLINE</a> / Grimme Online Award 2018 / Front End Development
+            <span class="underlined-link underlined-link--black js-show-pop-up">Deutschland spricht</span> – A political dating platform for news website ZEIT ONLINE / Grimme Online Award 2018 / Front End Development
             {{> _ds }}
         </div>
         <div class="project project--tile js-project">
             <div class="lazy-container lazy-container--ebertplatz">
                 <img class="project__image" data-src="assets/images/ebertplatz.jpg" data-srcset="assets/images/ebertplatz.jpg 1x, assets/images/ebertplatz@2x.jpg 2x" alt="Re: Ebertplatz – open-source archive for the public space Ebertplatz, Köln">
             </div>
-            <a class="underlined-link underlined-link--black" href="https://ebertplatz.org/" target="_blank">Re: Ebertplatz</a> – An open-source archive for the public space Ebertplatz, Köln / Web Development
+            <span class="underlined-link underlined-link--black js-show-pop-up">Re: Ebertplatz</span> – An open-source archive for the public space Ebertplatz, Köln / Web Development
             {{> _ebertplatz }}
         </div>
     </div>
