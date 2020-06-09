@@ -248,11 +248,18 @@ img[data-src] {
   }
 
   &__close {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 37px;
+    line-height: 37px;
     color: $blue;
     float: right;
 
     &:hover {
       cursor: pointer;
     }
+  }
+
+  &__content {
+    max-width: 90%;
   }
 }
