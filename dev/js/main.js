@@ -1,12 +1,16 @@
-const images = document.querySelectorAll('img[data-src]');
+const projects = document.querySelectorAll('.js-project');
 const popUpWrappers = document.querySelectorAll('.js-pop-up-wrapper');
 
-images.forEach((img) => {
+projects.forEach((project) => {
+  const popUpWrapper = project.querySelector('.js-pop-up-wrapper');
+  const img = project.querySelector('img[data-src]');
   const hasSrcSet = img.getAttribute('data-srcset');
   img.setAttribute('src', img.getAttribute('data-src'));
+
   if (hasSrcSet) {
     img.setAttribute('srcset', img.getAttribute('data-srcset'));
   }
+
   // when image is loaded remove data attribute to make image fade in with a css animation
   img.addEventListener('load', () => {
     img.removeAttribute('data-src');
@@ -14,20 +18,18 @@ images.forEach((img) => {
       img.removeAttribute('data-srcset');
     }
   });
-  // show project description modal on click
+
   img.addEventListener('click', () => {
-    const project = img.parentNode.parentNode;
-    project.querySelector('.js-pop-up-wrapper').style.display = 'block';
+    popUpWrapper.setAttribute('style', 'display: block;');
+  });
+
+  // close popup on click
+  popUpWrapper.addEventListener('click', () => {
+    popUpWrapper.removeAttribute('style');
   });
 });
 
-// close popups on click or esc key
-popUpWrappers.forEach((wrapper) => {
-  wrapper.addEventListener('click', () => {
-    wrapper.removeAttribute('style');
-  });
-});
-
+// close all popups on esc key
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     popUpWrappers.forEach((wrapper) => {
