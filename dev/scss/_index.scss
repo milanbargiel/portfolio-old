@@ -14,7 +14,7 @@
 
 .postcard {
   position: relative;
-  margin: 0 (-$minor--px); // make postcard fullwidth on mobile
+  margin: 0 (-$slight--px); // make postcard fullwidth on mobile
 
   @media screen and (min-width: $bp-tablet) {
     margin: 0 auto;
