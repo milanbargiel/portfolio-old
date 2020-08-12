@@ -31,6 +31,7 @@
     "serve": "browser-sync start --server 'dist' --files 'dist'",
     "prestart": "npm run --silent build",
     "start": "npm-run-all --parallel serve watch",
+    "predeploy": "npm run build",
     "deploy": "scp -r dist/* ownserver:/var/www/milanbargiel.com"
   },
   "scriptsComments": {
