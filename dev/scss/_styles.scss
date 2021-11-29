@@ -143,13 +143,18 @@ h2 {
 // Specific styles for index page
 .nav {
   display: flex;
-}
-
-.nav__github {
-  margin: 6px -10px 4px auto;
+  justify-content: flex-end;
+  margin: 6px 0 4px;
 
   @media screen and (min-width: $bp-tablet) {
-    margin: 16px -10px 26px auto;
+    margin: 16px 0 26px;
+  }
+}
+
+.nav__link {
+  margin-left: 10px;
+
+  @media screen and (min-width: $bp-tablet) {
     font-size: $font-size-small;
   }
 }
